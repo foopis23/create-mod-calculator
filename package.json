@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "bunx --bun vite",
-    "build": "tsc -b && bunx --bun vite build",
+    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "preview": "bunx --bun vite preview",
     "data": "./download-data.sh"
   },
   "dependencies": {

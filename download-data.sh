@@ -4,17 +4,18 @@ mkdir -p tmp
 cd ./tmp
 
 # clone create repo
-git clone git@github.com:Creators-of-Create/Create.git
-git clone git@github.com:PixiGeko/Minecraft-default-assets.git
+git clone https://github.com/PixiGeko/Minecraft-default-assets.git
+git clone https://github.com/Creators-of-Create/Create.git
 
 cd ..
 
 # clean up old data
 rm -rf ./data
-rm -rf ./lang
+rm -rf ./assets
 
 mkdir ./data
 mkdir ./data/create
+mkdir ./data/minecraft
 mkdir ./assets
 mkdir ./assets/create
 mkdir ./assets/minecraft
