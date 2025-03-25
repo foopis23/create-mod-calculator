@@ -1,0 +1,1 @@
+export type RecipeThroughput = { maxInput: number, results: { item: string, averageOutput: number }[] }
