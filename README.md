@@ -1,7 +1,8 @@
 # Create Mod Calculator
 Web application for calculating input and output speed of create mod processes.
 
-<img width="907" alt="Screenshot 2025-03-25 at 7 26 21 PM" src="https://github.com/user-attachments/assets/f195e8c3-c3a1-43c7-87e7-7a07e5a96ec0" />
+![Screenshot 2025-03-26 at 11 17 56 AM](https://github.com/user-attachments/assets/c0f1cf1c-cb28-4493-895e-b78931dac089)
+
 
 
 ## Planned Features
