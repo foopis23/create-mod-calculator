@@ -7,6 +7,7 @@ import { Input } from './components/ui/input'
 import { Label } from '@radix-ui/react-label'
 import { calculateThroughput } from './lib/recipes'
 import { Table, TableBody, TableCell, TableFooter, TableHead, TableHeader, TableRow } from './components/ui/table'
+import { getItemName } from './lib/lang'
 
 
 function App() {
@@ -65,7 +66,7 @@ function App() {
                     <TableBody>
                       {throughput.results.map((result, i) => (
                         <TableRow>
-                          <TableCell>{result.item}</TableCell>
+                          <TableCell>{getItemName(result.item)}</TableCell>
                           <TableCell>{result.averageOutput.toFixed(2)} items/s</TableCell>
                           <TableCell>{crushingWheelRecipe?.results[i].count?.toFixed(0) ?? 1}</TableCell>
                           <TableCell>{crushingWheelRecipe?.results[i].chance?.toFixed(2) ?? (1).toFixed(2)}</TableCell>
