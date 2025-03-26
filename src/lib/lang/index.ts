@@ -1,9 +1,11 @@
-import createLang from '../../assets/create/lang/en_us.json';
-import minecraftLang from '../../assets/minecraft/lang/en_us.json';
+import createUsEn from '@/../assets/create/lang/en_us.json';
+import minecraftUsEn from '@/../assets/minecraft/lang/en_us.json';
+import { tagsUsEN } from './tags';
+
 
 const lang: Record<string, string> = {
-	...minecraftLang,
-	...createLang
+	...minecraftUsEn,
+	...createUsEn
 }
 
 export function getItemName(item_id: string) {
@@ -14,4 +16,8 @@ export function getItemName(item_id: string) {
 	return lang[`item.${namespace}.${id}`]
 		?? lang[`block.${namespace}.${id}`]
 		?? item_id;
+}
+
+export function getTagName(tag_id: string) {
+	return tagsUsEN[tag_id] ?? tag_id;
 }

@@ -20,13 +20,13 @@ import {
 import { useQuery } from "@tanstack/react-query"
 import { CrushingRecipe, crushingRecipes } from "@/lib/recipes/crushing"
 import { isTagIngredient } from "@/lib/recipes/schemas"
-import { getItemName } from "@/lib/lang"
+import { getItemName, getTagName } from "@/lib/lang"
 import { cn } from "@/lib/utils"
 
 function recipeToLabel(recipe?: CrushingRecipe) {
 	if (!recipe) return "";
 
-	const ingredientName = (isTagIngredient(recipe.ingredients[0]) ? recipe.ingredients[0].tag : getItemName(recipe.ingredients[0].item))
+	const ingredientName = (isTagIngredient(recipe.ingredients[0]) ? getTagName(recipe.ingredients[0].tag) : getItemName(recipe.ingredients[0].item))
 	return `${ingredientName} => ${getItemName(recipe.results[0].item)}`
 }
 
